@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: ease;
+    scroll-padding-top: 70px;
+
+}
+
+body {
+    background-color: #f8f8f8;
+    height: 100vw;
+}
+
+/* FONTOVI */
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Black.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Light.ttf) format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Bold.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: Archivo-Black;
+    src: url(../fonts/Archivo_Black/ArchivoBlack-Regular.ttf);
+}
+
+
+/* header section */
+div.white-bg {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100px;
+}
+
+div.header-logo-container {
+    position: relative;
+    left: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    height: inherit;
+}
+
+div.header-logo-container>img {
+    display: flex;
+    flex-wrap: wrap;
+    width: 335px;
+}
+
+div.links {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: 350px;
+    justify-content: space-evenly;
+    width: 45%;
+    align-content: center;
+
+
+}
+
+div.links>a {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 20px;
+    height: 100px;
+    text-decoration: none;
+    color: black;
+    font-family: Roboto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+div.links>a:hover {
+    cursor: pointer;
+    transition: 0.15s;
+    color: #ec7333;
+}
+
+div.search-icon {
+    display: inline-flex;
+    flex-wrap: wrap;
+    position: relative;
+    font-size: 1.8vw;
+    align-items: center;
+    left: 1.7vw;
+}
+
+
+@media screen and (max-width: 767px) {
+    /* HEADER SECTION */
+
+    div.white-bg {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 13vw;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        left: unset;
+
+    }
+
+    div.header-logo-container {
+        left: unset;
+    }
+
+    div.header-logo-container>img {
+        width: 23vw;
+    }
+
+    div.links {
+        left: unset;
+        top: 0.8vw;
+        width: 60%
+    }
+
+    div.links>a {
+        font-size: 2.2vw;
+    }
+
+    div.search-icon {
+        left: unset;
+
+    }
+
+    .fa-magnifying-glass:before,
+    .fa-search:before {
+        content: "\f002";
+        font-size: 2.2vw;
+    }
+
+}
+
+@media screen and (min-width: 767px) and (max-width:1500px) {
+
+    div.white-bg {
+
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100px;
+        align-items: center;
+        justify-content: space-evenly;
+        align-content: center;
+        flex-direction: row;
+        left: unset;
+    }
+
+    div.header-logo-container {
+        left: unset;
+
+    }
+
+    div.header-logo-container>img {
+        width: 18vw;
+    }
+
+    div.links {
+        top: 0.5vw;
+        justify-content: space-evenly;
+        width: 50%;
+        left: unset;
+    }
+
+    div.links>a {
+        font-size: 1.8vw;
+    }
+
+    div.search-icon {
+        left: unset;
+
+    }
+
+    .fa-magnifying-glass:before,
+    .fa-search:before {
+        content: "\f002";
+        font-size: 1.7vw;
+        left: unset;
+    }
+
+}
+
+
+
+/* banner section */
+.image-section {
+    position: relative;
+}
+
+div.image-section>img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    animation: overlayAnimation ease 3s;
+    background-image: linear-gradient(to right, rgba(0, 116, 211, 0.658), #5094facc);
+}
+
+@keyframes overlayAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+div.text-and-button {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 1;
+    animation: textAnimation ease 1.5s
+}
+
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+p.hero-text {
+    position: relative;
+    bottom: 1.6vw;
+    font-size: 2.5vw;
+    color: white;
+    text-shadow: 0px 2px 2px rgba(40, 40, 40, 0.28);
+    font-family: Roboto;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0.5vw;
+}
+
+
+button.contact-us {
+    position: relative;
+    top: 2.5vw;
+    width: 13.1vw;
+    height: 3.4vw;
+    border: none;
+    background-color:#ec7333;
+    color: white;
+    font-size: 1.15vw;
+    text-decoration: none;
+    letter-spacing: 1px;
+    box-shadow: 3px 3px 6px 0px rgb(232 244 253 / 26%);
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+button.contact-us:hover {
+    cursor: pointer;
+    transition: 0.2s;
+    color:#f8f8f8 ;
+    background-color: #1b5aa3 ;
+    border: none;
+}
+
+@media screen and (max-width: 767px) {
+
+    div.image-section>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        writing-mode: vertical-lr;
+        background-size: contain;
+        background-position: center;
+    }
+
+    p.hero-text {
+        font-size: 5vw;
+    }
+
+  
+
+    button.contact-us {
+        top: 7vw;
+        width: 32.8vw;
+        height: auto;
+        font-size: 3vw;
+        padding: 9px;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width:1500px) {
+    button.contact-us {
+        width: 20vw;
+        height: auto;
+        font-size: 2vw;
+        padding: 9px;
+    }
+}

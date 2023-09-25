@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: ease;
+    scroll-padding-top: 70px;
+
+}
+
+body {
+    background-color: #f8f8f8;
+    height: 100vw;
+}
+
+/* FONTOVI */
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Black.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/) format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Bold.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: Archivo-Black;
+    src: url(../fonts/Archivo_Black/ArchivoBlack-Regular.ttf);
+}
+
+/* 
+.warehouse-illustration{
+    position: relative;
+    overflow: hidden;
+}
+.warehouse-illustration>img{
+    width: 100%;
+    height: auto;
+} */
+/* .warehouse-illustration  {
+
+    width: 300px;
+    height: 300px;
+    background-image: url('../img/warehouse-img.jpg');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+} */
+
+img{
+    clip-path: url('../img/warehouse-img.jpg');
+}
+.warehouse-wrapper {
+    position: relative;
+    top: 1vw;
+    display: flex;
+    justify-content: space-evenly;
+    height: 50vw;
+}
+
+.warehouse-service-wrapper {
+    height: 90%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    background-color: rgb(0 116 211 / 14%);
+    border-radius: 20px;
+    padding: 2vw;
+}
+
+.card-img {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img > img {
+    width: 90%;
+    border-radius: 20px
+}
+
+h3 {
+    COLOR: #0d325d;
+    font-family: 'Roboto';
+    margin-top: 1vw;
+    text-align: center;
+    text-wrap: nowrap;
+}
+
+p {
+    margin-top: 1vw;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: calc(13px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+    text-align: center;
+}
