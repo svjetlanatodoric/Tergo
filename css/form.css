@@ -1,18 +1,36 @@
 /* FORM SECTION */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+    transition: ease;
+    scroll-padding-top: 70px;
+
+}
+
+body {
+    background-color: #f8f8f8;
+    height: fit-content;
+}
 
 .form-section {
     position: relative;
-    margin: auto;
-    width: 100%;
-    height: 45vw;
+    /* padding-top: calc(105px + (21 - 13) * ((100vw - 320px) / (1600 - 20))); */
+    width: 50%;
+    height: fit-content;
     background-color: #f7f7f7;
-
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto 10vw auto;
 }
 
 .form-title {
     position: relative;
-    top: -2vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -23,29 +41,44 @@
     font-style: normal;
 }
 
-.line-and-title {
-    position: relative;
-    top: 8.2vw;
-}
-
-div.form-line {
-    position: relative;
-    top: unset;
+.form-header {
+    height: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 div.form {
-    transform: translate(-9vw, 12vw);
     width: min-content;
+    color: white;
+    background-color: #ec7333;
 }
 
-form,
+div.form {
+    box-shadow: 1px 0px 20px 2px #ec7333;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
 input,
 textarea,
-div.form,
 div.name-container,
 div.email-container,
 div.textarea-container {
-    width: 96%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-content: space-around;
@@ -71,20 +104,31 @@ input[type="text"],
 input[type="email"],
 textarea {
     position: relative;
-    width: 40vw;
+    width: 100%;
     height: 3vw;
-    border: 1px solid black;
+    border: 1px solid white;
     padding-left: 20px;
     opacity: 1;
     margin: 1vw;
     background-color: #f7f7f7;
+    box-shadow: 1px 1px 20px 0px #b24d18;
 
+}
+
+input[type="text"]:focus-visible,
+input[type="text"]:focus-visible,
+input[type="email"]:focus-visible,
+textarea {
+    border: 2px solid white;
+    outline: none;
+    box-shadow: -1px 1px 9px #ffffff6e;
+    transition: .3s;
 }
 
 textarea {
     resize: none;
     height: 10vw;
-    padding-left: 20px;
+    padding: calc(12px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
 }
 
 ::placeholder {
@@ -98,16 +142,18 @@ textarea {
 
 input[type="submit"] {
     margin-top: 1vw;
-    width: 10%;
-    height: 2.6vw;
-    border: 1px solid black;
+    width: 30%;
+    height: 4vw;
+    border: 1px solid white;
     border-radius: none;
     background-color: #f7f7f7;
-    font-size: .8vw;
+    font-size: 1vw;
     font-family: Roboto;
     font-weight: 500;
     font-style: normal;
     letter-spacing: 1px;
+    box-shadow: 1px 1px 20px 0px #b24d18;
+    margin-bottom: 5%;
 }
 
 
@@ -121,43 +167,67 @@ input[type="submit"] {
     }
 
     div.form {
-        height: 25vw;
-        top: 34vw;
+        height: fit-content;
         transform: none;
         position: relative;
     }
 
-    textarea {
+    .form-header {
+        margin: 5vw auto;
+    }
+
+    /* textarea {
         width: 100% !important;
         height: 20vw;
         padding-top: 1px;
-    }
+    } */
 
     ::placeholder {
         font-size: 2.5vw;
     }
 
     input[type="submit"] {
-        width: 22%;
-        height: 5.6vw;
-        font-size: 1.6vw;
+        width: 50%;
+        height: 10vw;
+        font-size: 3vw;
+        margin-top: 3vw;
+    }
+
+}
+
+@media screen and (max-width:499px) {
+    .form-section {
+        width: 90%;
+    }
+    textarea{
+        height: 45vw;
     }
 
 }
 
 @media screen and (min-width:500px) and (max-width:767px) {
+    .form-section {
+        position: relative;
+        width: 85%;
+        height: fit-content;
+    }
 
+    .form-header {
+        margin: 2vw auto;
+    }
 
+    /* 
     textarea,
     input[type="text"],
     input[type="email"] {
         width: 100% !important;
-    }
+    } */
 
+    textarea,
     input[type="text"],
     input[type="email"] {
         height: 7vw;
-        width: 100%;
+        width: 90%;
         margin-bottom: 4vw;
     }
 
@@ -181,75 +251,45 @@ input[type="submit"] {
 }
 
 @media screen and (max-width:767px) {
-    .form-section {
-        position: relative;
-        margin: auto;
-        width: 100%;
-        height: 110vw;
-        background-color: #f7f7f7;
-        top: 25vw;
-    }
 
-    .line-and-title {
-        top: 10vw;
-
-    }
 
     .form-title {
         text-align: center;
-        font-size: 1.1rem;
+        font-size: calc(20px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+        ;
         letter-spacing: .15rem;
         line-height: 1.6rem;
     }
 
-    div.line {
-        transform: scale(1.5, 1.3);
-        top: 1vw;
-    }
-
+    /* 
     textarea,
     input {
         width: 100%;
-    }
+    } */
 
     div.form {
-        height: 25vw;
-        top: 32vw;
+        height: fit-content;
         margin: auto;
-        transform: none;
         position: relative;
     }
 
+    /* 
     textarea::placeholder {
         padding-top: 14px;
-    }
+    } */
 
 }
 
 @media screen and (min-width:767px) and (max-width:1240px) {
 
     .form-title {
-        top: -5vw;
         text-align: center;
         font-size: 2.1vw;
         letter-spacing: .15rem;
     }
 
-    .line-and-title {
-        margin-top: 10vw;
-    }
-
-    div.form-line {
-        top: -2vw;
-    }
-
     .form-section {
-        top: 8vw;
-    }
-
-    .form-section {
-        margin: auto;
-        width: 100%;
+        width: 65%;
     }
 
     textarea,
@@ -258,9 +298,7 @@ input[type="submit"] {
     }
 
     div.form {
-        height: 25vw;
-        top: 4vw;
-        transform: translate(-12vw, 9vw);
+        height: fit-content;
         position: relative;
     }
 
@@ -268,17 +306,17 @@ input[type="submit"] {
     input[type="email"],
     textarea {
         height: 4vw;
-        width: 50%;
+        width: 100%;
         margin-bottom: 3vw;
     }
 
     textarea {
-        height: 8vw;
+        height: 15vw;
     }
 
-    textarea::placeholder {
+    /* textarea::placeholder {
         padding-top: 15px;
-    }
+    } */
 
     ::placeholder {
         font-size: 1.1vw;
@@ -287,202 +325,7 @@ input[type="submit"] {
 
 @media screen and (min-width:1240px) {
 
-    textarea::placeholder {
-        padding-top: 20px;
-    }
+    /* textarea::placeholder {
+        /* padding-top: 20px; */
 
-}
-
-/* FORM CIRCLES */
-.icons-form-section {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    width: fit-content;
-    margin: auto;
-    position: relative;
-    top: 13.3vw;
-    height: 20vw;
-    transform: translate(15vw, -26vw);
-}
-
-div.form-circle {
-    position: relative;
-    width: 4vw;
-    height: 4vw;
-    border: 2px solid black;
-    border-radius: 100%;
-
-}
-
-div svg {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    width: 45%;
-    height: 45%;
-}
-
-.contact {
-    display: flex;
-    align-content: center;
-    align-items: start;
-    justify-content: space-around;
-    flex-direction: column;
-    width: fit-content;
-    margin: auto;
-    position: relative;
-    top: 13.3vw;
-    height: 20vw;
-    transform: translate(24vw, -46vw);
-    font-family: Roboto;
-    font-weight: 300;
-    color: rgb(47, 47, 47);
-    font-style: normal;
-}
-
-.address-contact,
-.email-contact,
-.phone-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.address-paragraph,
-.email-paragraph,
-.phone-paragraph {
-    font-size: .7rem;
-    margin-bottom: .6vw;
-}
-
-.addresses,
-.phones,
-.emails {
-    font-size: .7rem;
-    line-height: 1.5vw;
-}
-
-@media screen and (min-width:500px) and (max-width:767px) {
-    .icons-form-section {
-        transform: none;
-        height: 37rem;
-    }
-
-    .contact {
-        justify-content: space-between;
-        height: 35rem;
-        transform: translate(0, -15rem);
-    }
-}
-
-@media screen and (max-width:767px) {
-    .icons-form-section {
-        transform: none;
-        height: 120%;
-        top: 41vw;
-    }
-
-    div.form-circle {
-        width: 20vw;
-        height: 20vw;
-    }
-
-    .contact {
-        top: unset;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 145%;
-        transform: translate(0, -85vw);
-        font-size: 1vw;
-        font-weight: 400;
-    }
-
-
-    .address-contact,
-    .email-contact,
-    .phone-contact {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .address-paragraph,
-    .email-paragraph,
-    .phone-paragraph {
-        font-size: 1rem;
-        margin-bottom: 2.6vw;
-    }
-
-
-    .addresses,
-    .phones,
-    .emails {
-        font-size: 1rem;
-        line-height: 5vw;
-    }
-}
-
-@media screen and (min-width:767px) and (max-width:1000px) {
-    .icons-form-section {
-        transform: translate(15vw, -30vw);
-        height: 28vw;
-        top: 13.3vw
-    }
-
-    .contact {
-        transform: translate(31vw, -58vw);
-        justify-content: space-around;
-        height: 28vw;
-    }
-
-    div.form-circle {
-        width: 6vw;
-        height: 6vw;
-    }
-
-    .addresses,
-    .phones,
-    .emails {
-        line-height: 2vw;
-    }
-}
-
-@media screen and (min-width:1000px) and (max-width:1240px) {
-    .icons-form-section {
-        transform: translate(15vw, -28vw);
-        height: 25vw;
-    }
-
-    .contact {
-        transform: translate(28vw, -53vw);
-        justify-content: space-around;
-        height: 25vw;
-    }
-
-    div.form-circle {
-        width: 6vw;
-        height: 6vw;
-    }
-}
-
-@media screen and (min-width:1240px) and (max-width:1500px) {
-    .icons-form-section {
-        transform: translate(15vw, -28vw);
-        height: 25vw;
-    }
-
-    .contact {
-        transform: translate(26vw, -53vw);
-        height: 25vw;
-    }
-
-    div.form-circle {
-        width: 6vw;
-        height: 6vw;
-    }
 }
