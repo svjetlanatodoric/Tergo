@@ -1,25 +1,23 @@
 
-<div class="form-section">
-    <div class="form-header">
-        <div class="line-and-title">
-            <p class="form-title" id="contact-anchor">KONTAKTIRAJTE NAS!</p>
-            <div class="line form-line"></div>
-        </div>
-    </div>
+<div class="form-section" id="contact-us">
+   
     <div class="form">
+    <div class="form-header">
+            <p class="form-title" id="contact-anchor">FEEL FREE TO CONTACT US!</p>
+        </div>
         <form id="contactForm" method="POST" action="">
             <div class="name-container">
-                <input type="text" class="name" name="name" id="name" placeholder="VAŠE IME " asterisk="*" required>
+                <input type="text" class="name" name="name" id="name" placeholder="Your name: " asterisk="*" required>
             </div>
 
             <div class="email-container">
-                <input type="email" id="email" name="email" class="email" placeholder="VAŠ MAIL" required>
+                <input type="email" id="email" name="email" class="email" placeholder="Your e-mail:" required>
 
             </div>
             <div class="textarea-container">
-                <textarea id="msg" class="msg" name="msg" placeholder="PORUKA:"></textarea>
+                <textarea id="msg" class="msg" name="msg" placeholder="Enter message:"></textarea>
             </div>
-            <input type="submit" value="POŠALJI!">
+            <input type="submit" value="SEND!">
             <script>
                 const form = document.getElementById("contactForm"); // Assuming you have a form with this ID
 
@@ -50,3 +48,5 @@
             </script>
         </form>
     </div>
+    </div>
+
