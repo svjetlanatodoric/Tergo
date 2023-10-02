@@ -78,14 +78,18 @@
             <!-- ROAD TRANSPORT ICON -->
             <div class="thumbnail-element">
                 <div class="thumbnail-wrapper road-transport">
-                    <div class="small-circle c2"></div>
-                    <div class="icon-wrapper">
-                        <div class="icon">
-                            <i class="fa-solid fa-truck-fast fa-3x"></i>
+                    <a href="road-transport.php">
+                        <div class="small-circle c2"></div>
+                        <div class="icon-wrapper">
+                            <div class="icon">
+                                <i class="fa-solid fa-truck-fast fa-3x"></i>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <h3>ROAD TRANSPORT</h3>
+                <a href="road-transport.php">
+                    <h3>ROAD TRANSPORT</h3>
+                </a>
                 <div class="thumbnail-text">
                     <p>We offer fast and reliable transport of your goods whether it's bulked freight or freight on
                         pallets.</p>
@@ -192,8 +196,8 @@
     <?php
     include("map.php");
     ?>
-<!-- FOOTER -->
-<?php
+    <!-- FOOTER -->
+    <?php
     include("footer.html");
     ?>
     <script src="../js/services.js"></script>
