@@ -6,7 +6,7 @@
         <a href="index.php">HOME</a>
         <a href="index.php#services">SERVICES</a>
         <a href="index.php#about-us">ABOUT US</a>
-        <a href="#contact-us">KONTAKT</a>
+        <a href="#contact-us">CONTACT</a>
         <!-- <div class="search-icon">
             <i class="fa-solid fa-magnifying-glass"></i>
         </div> -->
