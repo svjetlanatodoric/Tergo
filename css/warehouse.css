@@ -13,7 +13,7 @@ html {
 
 body {
     background-color: #f8f8f8;
-    height: 100vw;
+    height: fit-content;
 }
 
 /* FONTOVI */
@@ -35,7 +35,7 @@ body {
 
 @font-face {
     font-family: Roboto;
-    src: url(../fonts/) format('truetype');
+    src: url(../fonts/Roboto/Roboto-Light.ttf) format('truetype');
     font-weight: 200;
     font-style: normal;
 }
@@ -49,51 +49,95 @@ body {
 
 
 @font-face {
-    font-family: Archivo-Black;
-    src: url(../fonts/Archivo_Black/ArchivoBlack-Regular.ttf);
+    font-family: Caveat;
+    src: url(../fonts/Caveat/static/Caveat-Bold.ttf) format('truetype');
+    font-weight: 200;
+    font-style: normal;
 }
 
-/* 
-.warehouse-illustration{
-    position: relative;
-    overflow: hidden;
+div.content {
+    margin-bottom: 10vw;
 }
-.warehouse-illustration>img{
+
+p.warehouse-hero-text {
+    font-size: calc(30px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+    font-family: 'Roboto';
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #e2f0ff;
+}
+
+p.solution {
+    font-family: Caveat;
+    font-size: calc(110px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+    color: #ec7333;
+    letter-spacing: 4px;
+    text-shadow: -1px -3px 20px #ec7333f2;
+}
+
+.warehouse-hero {
+    display: flex;
+    height: 100%;
+}
+
+.hero-section-text {
+    z-index: 1;
+    text-align: center;
+
+}
+
+.warehouse-illustration {
     width: 100%;
-    height: auto;
-} */
-/* .warehouse-illustration  {
-
-    width: 300px;
-    height: 300px;
-    background-image: url('../img/warehouse-img.jpg');
-    background-size: cover;
-    background-position: center;
-    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
-} */
-
-img{
-    clip-path: url('../img/warehouse-img.jpg');
+    background-attachment: fixed;
+    overflow: hidden !important;
+    position: relative;
+    /* z-index: 1; */
+    height: 100%;
+    background-image: url(../img/warehouse-img.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
 }
+
+.warehouse-overlay {
+    position: relative;
+    width: 35vw;
+    height: 35vw;
+    box-shadow: 0 0 0 114vw #0d325dad;
+    border-radius: 100%;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.warehouse-heading>h2 {
+    font-family: Roboto;
+    color: #0d325d;
+    text-align: center;
+    margin: 4vw auto;
+}
+
 .warehouse-wrapper {
     position: relative;
     top: 1vw;
     display: flex;
     justify-content: space-evenly;
-    height: 50vw;
+    height: fit-content;
 }
 
 .warehouse-service-wrapper {
-    height: 90%;
+    height: unset;
     width: 25%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-content: center;
     align-items: center;
-    background-color: rgb(0 116 211 / 14%);
-    border-radius: 20px;
-    padding: 2vw;
+    background: radial-gradient(at 50px 70px, transparent, #4d90fe21);
+    border-radius: calc(51px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+    padding: 5vw 2vw;
+    box-shadow: -5px -1px 9px 0px #4d90fe21
 }
 
 .card-img {
@@ -104,23 +148,113 @@ img{
     align-items: center;
 }
 
-.card-img > img {
+.card-img>img {
     width: 90%;
     border-radius: 20px
 }
 
-h3 {
+.warehouse-service-wrapper h3 {
     COLOR: #0d325d;
     font-family: 'Roboto';
-    margin-top: 1vw;
+    margin-top: 3vw;
     text-align: center;
     text-wrap: nowrap;
 }
 
-p {
+.warehouse-service-wrapper p {
     margin-top: 1vw;
     font-family: Roboto;
     font-style: normal;
-    font-size: calc(13px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+    font-size: calc(10px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
     text-align: center;
+    line-height: unset;
+}
+
+i.fa-regular.fa-circle-check {
+    font-size: 5vw;
+    color: #ec7333;
+}
+
+i.fa-regular.fa-circle-check:hover {
+    color: #0d325d;
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: .3s;
+}
+
+@media screen and (max-width:425px) {
+    .warehouse-overlay {
+        width: unset;
+        height: unset;
+    }
+
+    .warehouse-hero {
+        height: calc(600px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+    }
+
+    .warehouse-heading>h2 {
+        margin: 9vw 4vw;
+    }
+}
+
+@media screen and (min-width:425px) and (max-width: 768px) {
+    .warehouse-overlay {
+        width: unset;
+        height: unset;
+    }
+
+    .warehouse-hero {
+        height: calc(500px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+    }
+
+
+    .warehouse-illustration {
+        justify-content: center;
+    }
+
+    p.solution {
+        font-size: calc(85px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+
+    .hero-section-text {
+        margin: 20px;
+    }
+
+    .warehouse-wrapper {
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .warehouse-service-wrapper {
+        margin: 3vw;
+        height: 100%;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    i.fa-regular.fa-circle-check {
+        font-size: calc(40px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+    }
+
+    .warehouse-service-wrapper h3 {
+        text-wrap: wrap;
+    }
+
+    .warehouse-service-wrapper p {
+        margin-top: 1vw;
+        font-family: Roboto;
+        line-height: calc(20px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+        font-style: normal;
+        font-size: calc(12px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+        text-align: center;
+    }
 }
