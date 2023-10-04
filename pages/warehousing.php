@@ -2,6 +2,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warehousing services</title>
+    <link rel="shortcut icon" href="../img/o.png">
+
     <link rel="stylesheet" href="../css/banner.css">
     <link rel="stylesheet" href="../css/form.css">
     <link rel="stylesheet" href="../css/warehouse.css">
@@ -15,7 +17,6 @@
 
     <?php
     include("nav.php");
-
     ?>
 
     <div class="warehouse-hero">
@@ -34,11 +35,13 @@
 
     <div class="content">
         <!-- HEADING -->
-         <div class="warehouse-heading">
+        <div class="warehouse-heading">
             <h2>SERVICES WE ARE PROUD OF</h2>
         </div>
+
         <!-- CARDS -->
         <div class="warehouse-wrapper">
+
             <div class="warehouse-service-wrapper">
                 <div class="card-icon">
                     <i class="fa-regular fa-circle-check"></i>
@@ -63,11 +66,30 @@
 
         </div>
 
+
     </div>
+
     <?php
     include("form.php");
-     include("map.php");
+    ?>
+    <div id="area" class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <?php
+    include("map.php");
     include("footer.html");
     ?>
-    
 </body>
