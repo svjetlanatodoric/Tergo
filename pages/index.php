@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tergo</title>
+    <link rel="shortcut icon" href="../img/o.png">
     <link rel="stylesheet" href="../css/banner.css">
     <link rel="stylesheet" href="../css/services.css">
     <link rel="stylesheet" href="../css/form.css">
@@ -98,6 +99,7 @@
             <!-- DISTRIBUTION ICON -->
             <div class="thumbnail-element">
                 <div class="thumbnail-wrapper distribution">
+                <a href="distribution.php">
                     <div class="small-circle c3"></div>
                     <div class="icon-wrapper">
                         <div class="icon">
@@ -108,8 +110,11 @@
                             </svg>
                         </div>
                     </div>
+                    </a>
                 </div>
+                <a href="distribution.php">
                 <h3>DISTRIBUTION</h3>
+                </a>
                 <div class="thumbnail-text">
                     <p>We'll provide you distribution of your goods across the Europe, all depending on your
                         requirements.</p>
@@ -118,6 +123,7 @@
             <!-- CONTAINER ICON -->
             <div class="thumbnail-element">
                 <div class="thumbnail-wrapper container">
+                    <a href="container-handling.php">
                     <div class="small-circle c4"></div>
                     <div class="icon-wrapper">
                         <div class="icon">
@@ -134,8 +140,11 @@
                             </svg>
                         </div>
                     </div>
+                    </a>
                 </div>
+                <a href="container-handling.php">
                 <h3>CONTAINER HANDLING</h3>
+                </a>
                 <div class="thumbnail-text">
                     <p>Let the acceptance of containers in the port and transport of containers to the port become our
                         job.</p>
