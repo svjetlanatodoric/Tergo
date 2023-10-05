@@ -7,7 +7,7 @@
 html {
     scroll-behavior: smooth;
     transition: ease;
-    scroll-padding-top: 70px;
+    scroll-padding-top: 20px;
 
 }
 
@@ -93,12 +93,6 @@ div.container-handling-overlay{
 }
 
 .hero-section-text{
-    /* display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
     z-index: 1;
     text-align: center;
 }
@@ -127,13 +121,6 @@ div.container-handling-overlay{
     text-align: center;
     margin: 4vw auto;
 }
-
-/* .content{
-    background-image: url(../img/world.jpg);
-    background-size: cover;
-    background-position: center;
-
-} */
 
 .container-handling-wrapper {
     position: relative;
@@ -192,20 +179,20 @@ path#nationwide,
 path#reliability,
 path#ontime {
     fill: #ec7333;
+    width: 4vw;
+    height: 4vw;
    
 }
 .container-icons:hover{
-    fill: #0d325d;
     transform: scale(1.1);
     cursor: pointer;
     transition: .3s;
-   
 }
-path#nationwide:hover,
-path#reliability:hover,
-path#ontime:hover{
-    fill: #0d325d;
 
+.container-icons:hover path#nationwide,
+.container-icons:hover  path#reliability,
+.container-icons:hover path#ontime{
+    fill: #0d325d;
 }
 svg {
     width: calc(85px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
