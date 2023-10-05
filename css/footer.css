@@ -8,7 +8,7 @@
 html {
     scroll-behavior: smooth;
     transition: ease;
-    scroll-padding-top: 70px;
+    scroll-padding-top: 20px;
 
 }
 
