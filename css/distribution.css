@@ -7,7 +7,7 @@
 html {
     scroll-behavior: smooth;
     transition: ease;
-    scroll-padding-top: 70px;
+    scroll-padding-top: 20px;
 
 }
 
@@ -94,12 +94,6 @@ div.distribution-overlay {
 }
 
 .hero-section-text {
-    /* display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
     z-index: 1;
     text-align: center;
 }
@@ -128,13 +122,6 @@ div.distribution-overlay {
     text-align: center;
     margin: 4vw auto;
 }
-
-/* .content{
-    background-image: url(../img/world.jpg);
-    background-size: cover;
-    background-position: center;
-
-} */
 
 .distribution-wrapper {
     position: relative;
@@ -176,7 +163,6 @@ div.distribution-overlay {
     font-family: 'Roboto';
     margin-top: 3vw;
     text-align: center;
-    text-wrap: nowrap;
 }
 
 .distribution-service-wrapper p {
@@ -189,8 +175,15 @@ div.distribution-overlay {
 }
 
 i.fa-solid.fa-truck-moving {
-    font-size: 5vw;
+    font-size: 6vw;
     color: #ec7333;
+}
+div.card-icon{
+    width: calc(80px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+    height: calc(80px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 i.fa-solid.fa-truck-fast:hover,
@@ -201,13 +194,23 @@ i.fa-solid.fa-truck-moving:hover {
     transition: .3s;
 }
 
+
 path#dist-service,
 path#product {
     fill: #ec7333;
     width: 4vw;
     height: 4vw;
+    
 }
-
+.distribution-icon:hover{
+    cursor: pointer;
+    transition: .3s;
+    transform: scale(1.1);
+}
+.distribution-icon:hover path#dist-service,
+.distribution-icon:hover  path#product{
+    fill: #0d325d;
+}
 svg {
     width: calc(80px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
     height: calc(80px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
@@ -282,7 +285,7 @@ svg {
     }
 
     i.fa-solid.fa-truck-moving {
-        font-size: calc(40px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+        font-size: calc(60px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
     }
 
     .distribution-service-wrapper h3 {
