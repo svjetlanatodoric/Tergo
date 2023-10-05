@@ -8,7 +8,7 @@
 html {
     scroll-behavior: smooth;
     transition: ease;
-    scroll-padding-top: 70px;
+    scroll-padding-top: 20px;
 
 }
 
@@ -175,13 +175,6 @@ input[type="submit"] {
     .form-header {
         margin: 5vw auto;
     }
-
-    /* textarea {
-        width: 100% !important;
-        height: 20vw;
-        padding-top: 1px;
-    } */
-
     ::placeholder {
         font-size: 2.5vw;
     }
@@ -215,13 +208,6 @@ input[type="submit"] {
     .form-header {
         margin: 2vw auto;
     }
-
-    /* 
-    textarea,
-    input[type="text"],
-    input[type="email"] {
-        width: 100% !important;
-    } */
 
     textarea,
     input[type="text"],
@@ -261,22 +247,12 @@ input[type="submit"] {
         line-height: 1.6rem;
     }
 
-    /* 
-    textarea,
-    input {
-        width: 100%;
-    } */
 
     div.form {
         height: fit-content;
         margin: auto;
         position: relative;
     }
-
-    /* 
-    textarea::placeholder {
-        padding-top: 14px;
-    } */
 
 }
 
@@ -314,18 +290,8 @@ input[type="submit"] {
         height: 15vw;
     }
 
-    /* textarea::placeholder {
-        padding-top: 15px;
-    } */
 
     ::placeholder {
         font-size: 1.1vw;
     }
-}
-
-@media screen and (min-width:1240px) {
-
-    /* textarea::placeholder {
-        /* padding-top: 20px; */
-
 }
