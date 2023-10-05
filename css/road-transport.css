@@ -7,7 +7,7 @@
 html {
     scroll-behavior: smooth;
     transition: ease;
-    scroll-padding-top: 70px;
+    scroll-padding-top: 20px;
 
 }
 
@@ -124,12 +124,6 @@ p.solution {
     text-align: center;
     margin: 4vw auto;
 }
-/* .content{
-    background-image: url(../img/world.jpg);
-    background-size: cover;
-    background-position: center;
-
-} */
 
 .rt-wrapper {
     position: relative;
@@ -191,7 +185,8 @@ i.fa-solid.fa-shield-halved {
 }
 
 i.fa-solid.fa-truck-fast:hover,
-i.fa-solid.fa-shield-halved:hover {
+i.fa-solid.fa-shield-halved:hover,
+.supply-chain-rt:hover{
     color: #0d325d;
     transform: scale(1.1);
     cursor: pointer;
@@ -202,17 +197,22 @@ path#supply-chain {
     width: 4vw;
     height: 4vw;
 }
+.supply-chain-rt:hover path#supply-chain {
+    fill: #0d325d;
+
+}
 
 svg {
     width: calc(80px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
     height: calc(80px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
 }
 @media screen and (max-width:425px) {
-    .rt-overlay {
-        width: unset;
-        height: unset;
-    }
-
+   p.solution{
+    font-size: calc(70px + (21 - 13) * ((100vw - 320px) / (1600 - 20)))
+   }
+p.rt-hero-text{
+    font-size: calc(30px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+}
     .rt-hero {
         height: calc(600px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
     }
@@ -223,10 +223,6 @@ svg {
 }
 
 @media screen and (min-width:425px) and (max-width: 768px) {
-    .rt-overlay {
-        width: unset;
-        height: unset;
-    }
 
     .rt-hero {
         height: calc(500px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
