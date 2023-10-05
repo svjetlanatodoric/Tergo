@@ -7,7 +7,7 @@
 html {
     scroll-behavior: smooth;
     transition: ease;
-    scroll-padding-top: 70px;
+    scroll-padding-top: 20px;
 
 }
 
@@ -128,7 +128,7 @@ p.solution {
 }
 
 .warehouse-service-wrapper {
-    
+
     height: unset;
     width: 25%;
     display: flex;
@@ -172,18 +172,29 @@ p.solution {
     line-height: unset;
 }
 
-i.fa-regular.fa-circle-check {
-    font-size: 5vw;
-    color: #ec7333;
+path#wh-card-icon1,
+path#wh-card-icon2,
+path#wh-card-icon3 {
+    fill: #ec7333;
+    width: 4vw;
+    height: 4vw;
+
 }
 
-i.fa-regular.fa-circle-check:hover {
-    color: #0d325d;
+.warehousing-icons:hover {
     transform: scale(1.1);
     cursor: pointer;
     transition: .3s;
 }
-
+.warehousing-icons:hover path#wh-card-icon1,
+.warehousing-icons:hover  path#wh-card-icon2,
+.warehousing-icons:hover path#wh-card-icon3{
+    fill: #0d325d;
+}
+svg {
+    width: calc(85px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+    height: calc(85px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
+}
 @media screen and (max-width:425px) {
     .warehouse-overlay {
         width: unset;
@@ -264,15 +275,15 @@ i.fa-regular.fa-circle-check:hover {
 
 
 
-.area{
-    top:220%;
+.area {
+    top: 220%;
     width: 100%;
     height: calc(1000px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
     position: absolute;
     z-index: -1;
 }
 
-.circles{
+.circles {
     position: absolute;
     top: 0;
     left: 0;
@@ -281,19 +292,19 @@ i.fa-regular.fa-circle-check:hover {
     overflow: hidden;
 }
 
-.circles li{
+.circles li {
     position: absolute;
     display: block;
     list-style: none;
     width: 20px;
     height: 20px;
-    background:#4d90fe7a;
+    background: #4d90fe7a;
     animation: animate 25s linear infinite;
     bottom: -150px;
-    
+
 }
 
-.circles li:nth-child(1){
+.circles li:nth-child(1) {
     left: 25%;
     width: 80px;
     height: 80px;
@@ -303,7 +314,7 @@ i.fa-regular.fa-circle-check:hover {
 }
 
 
-.circles li:nth-child(2){
+.circles li:nth-child(2) {
     left: 10%;
     width: 20px;
     height: 20px;
@@ -311,7 +322,7 @@ i.fa-regular.fa-circle-check:hover {
     animation-duration: 12s;
 }
 
-.circles li:nth-child(3){
+.circles li:nth-child(3) {
     left: 70%;
     width: 20px;
     height: 20px;
@@ -320,7 +331,7 @@ i.fa-regular.fa-circle-check:hover {
 
 }
 
-.circles li:nth-child(4){
+.circles li:nth-child(4) {
     left: 40%;
     width: 60px;
     height: 60px;
@@ -328,28 +339,28 @@ i.fa-regular.fa-circle-check:hover {
     animation-duration: 18s;
 }
 
-.circles li:nth-child(5){
+.circles li:nth-child(5) {
     left: 65%;
     width: 20px;
     height: 20px;
     animation-delay: 0s;
 }
 
-.circles li:nth-child(6){
+.circles li:nth-child(6) {
     left: 75%;
     width: 110px;
     height: 110px;
     animation-delay: 3s;
 }
 
-.circles li:nth-child(7){
+.circles li:nth-child(7) {
     left: 35%;
     width: 150px;
     height: 150px;
     animation-delay: 7s;
 }
 
-.circles li:nth-child(8){
+.circles li:nth-child(8) {
     left: 50%;
     width: 25px;
     height: 25px;
@@ -357,7 +368,7 @@ i.fa-regular.fa-circle-check:hover {
     animation-duration: 45s;
 }
 
-.circles li:nth-child(9){
+.circles li:nth-child(9) {
     left: 20%;
     width: 15px;
     height: 15px;
@@ -365,21 +376,23 @@ i.fa-regular.fa-circle-check:hover {
     animation-duration: 35s;
 }
 
-.circles li:nth-child(10){
+.circles li:nth-child(10) {
     left: 85%;
     width: 150px;
     height: 150px;
     animation-delay: 0s;
     animation-duration: 11s;
 }
-.circles li:nth-child(11){
+
+.circles li:nth-child(11) {
     left: 65%;
     width: 150px;
     height: 150px;
     animation-delay: 0s;
     animation-duration: 11s;
 }
-.circles li:nth-child(12){
+
+.circles li:nth-child(12) {
     left: 15%;
     width: 65px;
     height: 65px;
@@ -390,13 +403,13 @@ i.fa-regular.fa-circle-check:hover {
 
 @keyframes animate {
 
-    0%{
+    0% {
         transform: translateY(0) rotate(0deg);
         opacity: 1;
         border-radius: 0;
     }
 
-    100%{
+    100% {
         transform: translateY(-1000px) rotate(720deg);
         opacity: 0;
         border-radius: 50%;
@@ -405,56 +418,62 @@ i.fa-regular.fa-circle-check:hover {
 }
 
 @media screen and (max-width: 480px) {
-    .area{
+    .area {
         width: 100%;
         top: 100%;
         height: calc(1500px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
-       
+
     }
 }
+
 @media screen and (min-width: 480px) and (max-width: 768px) {
-    .area{
+    .area {
         top: 100%;
         width: 100%;
         height: calc(1800px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
-     
-    } 
-    .circles li{
+
+    }
+
+    .circles li {
         bottom: 0;
     }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .area{
+    .area {
         top: 100%;
         width: 100%;
         height: calc(1800px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
-     
-    } 
-    .circles li{
+
+    }
+
+    .circles li {
         bottom: 0;
     }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-    .area{
+    .area {
         top: 100%;
         width: 100%;
         height: calc(1600px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
-     
-    } 
-    .circles li{
+
+    }
+
+    .circles li {
         bottom: 0;
     }
 }
 
-@media screen and (min-width: 1441px)  {
-    .area{
+@media screen and (min-width: 1441px) {
+    .area {
         top: 100%;
         width: 100%;
         height: calc(2000px + (21 - 13) * ((100vw - 320px) / (1600 - 20)));
-     
-    } 
-    .circles li{
+
+    }
+
+    .circles li {
         bottom: -150px;
     }
 }
