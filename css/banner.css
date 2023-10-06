@@ -59,7 +59,6 @@ div.white-bg {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 100px;
 }
 
 div.header-logo-container {
@@ -86,7 +85,6 @@ div.links {
     width: 45%;
     align-content: center;
 
-
 }
 
 div.links>a,
@@ -95,7 +93,7 @@ div.links>a,
     align-items: center;
     flex-wrap: wrap;
     font-size: 20px;
-    height: 100px;
+    height: 60px;
     text-decoration: none;
     color: black;
     font-family: Roboto;
